@@ -1,0 +1,14 @@
+services:
+  # Main Server
+  server:
+    container_name: server
+    image: docker.io/nginx:1.25.4-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
+      - ./nginx/logo.png:/f.kth.se/logo.png
+      - ./nginx/favicon.ico:/f.kth.se/favicon.ico
+      - ./src:/f.kth.se/signature
