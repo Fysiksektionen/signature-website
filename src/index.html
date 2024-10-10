@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html>
+<script src="/signature/signature.js"></script>
+<head>
+<title>Signatur generator</title>
+</head>
+<body>
+
+
+<h1>Signatur generator</h1>
+<p>Sektionen använder sig av signaturer i mail (mer beskrivning av hur...).</p>
+
+<h2>Uppgifter</h2>
+<table>
+	<tr>
+		<td>
+			<input id="name">För- och efternamn (t.ex. Wolfram Val)</input>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input id="job">Funktionärspost (t.ex. Valmaskot)</input>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input id="year">År (t.ex. 1943)</input>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input id="mail">Mejladress (t.ex. valberedningen@f.kth.se)</input>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input id="phone">Telefonnummer (t.ex. 123-503 97 22)</input>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button type="button" onclick="writeSignature();">Tryck här</button>
+		</td>
+	</tr>
+</table>
+
+<h2>Förhandsvisning</h2>
+<div id="preview"></div>
+
+<h2>HTML</h2>
+<div><pre id="code"></pre></div>
+
+</body>
+</html> 
