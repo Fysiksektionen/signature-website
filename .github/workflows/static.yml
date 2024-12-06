@@ -15,10 +15,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Compress build
-        working-directory: ./src
-        run: tar -czf static.tar.gz .
+        run: tar -czf static.tar.gz -C src .
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ./src/static.tar.gz
+            ./static.tar.gz
