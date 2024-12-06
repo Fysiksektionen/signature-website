@@ -1,0 +1,24 @@
+name: Build and publish static files
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Compress build
+        working-directory: ./src
+        run: tar -czf build.tar.gz -C build .
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            ./src/build.tar.gz
