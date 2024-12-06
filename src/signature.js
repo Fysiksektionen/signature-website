@@ -1,4 +1,4 @@
-const URL = 'http://0.0.0.0/signature';
+const URL = 'https://f.kth.se/signature';
 async function getTemplate() {
 	return fetch(URL + '/signature.html').then(function(response) {
 		return response.text();
